@@ -15,8 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 15px 30px 15px 30px;
-    min-height: 5vh;
+    padding: 1vh 3vw 1vh 3vw;
     background-color: black;
     color: white;
     border-bottom: solid 2px #FF8000;
@@ -31,12 +30,12 @@ header {
     font-weight: bold;
 }
 
-.header-logo > a {
+.header-logo a {
     text-decoration: none;
     color: inherit;
 }
 
-.header-logo > a > span {
+.header-logo a span {
     color: #FF8000;
 }
 
@@ -59,21 +58,19 @@ section.banner {
         text-transform: uppercase;
     }
 
-    .header-menu > a {
+    .header-menu a {
         text-decoration: none;
         color: inherit;
     }
 
-    .header-menu > a:hover, a.selected {
+    .header-menu a:hover, .header-menu a.selected {
         color: #FF8000;
     }
 
     section.banner {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 45vh;
+        padding: 10vh 5vw 10vh 0;
         background-image: url("../img/background.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -83,9 +80,8 @@ section.banner {
         box-shadow: 0 -6px 10px 5px black;
     }
 
-    section.banner > p {
+    section.banner p {
         align-self: flex-end;
-        margin-right: 5vw;
         font-family: "Play", sans-serif;
         font-size: 4em;
         font-weight: bold;
@@ -94,9 +90,8 @@ section.banner {
         color: #8C1616;
     }
 
-    section.banner > a {
+    section.banner a {
         align-self: flex-end;
-        margin-right: 5vw;
         font-family: "Reggae One", sans-serif;
         font-size: 6em;
         font-weight: bold;
@@ -104,20 +99,20 @@ section.banner {
         transform: rotate(-10deg);
         text-shadow: 3px 3px #FF8000, 6px 6px 5px black;
         color: white;
-        animation: pulse 2s infinite;
+        animation: wobble 2s infinite;
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(-9deg);
     }
 
-    @keyframes pulse {
-        0% {
-            transform: rotate(-9deg);
-        }
+    70% {
+        transform: rotate(-10deg);
+    }
 
-        70% {
-            transform: rotate(-10deg);
-        }
-
-        100% {
-            transform: rotate(-9deg);
-        }
+    100% {
+        transform: rotate(-9deg);
     }
 }
