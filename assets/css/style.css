@@ -47,6 +47,27 @@ section.banner {
     display: none;
 }
 
+section.about {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw 5vh 5vw;
+    gap: 5vh;
+}
+
+section.about p {
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+section.about h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px black, 2px 2px 4px black;
+    color: #FF8000;
+}
+
 @media only screen and (min-width: 768px) {
     .header-menu {
         display: flex;
@@ -86,7 +107,7 @@ section.banner {
         font-size: 4em;
         font-weight: bold;
         transform: rotate(-10deg);
-        text-shadow: 3px 3px #FF8000, 6px 6px 5px black;
+        text-shadow: 1px 1px #FF8000, 2px 2px 4px black;
         color: #8C1616;
     }
 
@@ -97,9 +118,16 @@ section.banner {
         font-weight: bold;
         text-decoration: none;
         transform: rotate(-10deg);
-        text-shadow: 3px 3px #FF8000, 6px 6px 5px black;
+        text-shadow: 1px 1px #FF8000, 2px 2px 4px black;
         color: white;
         animation: wobble 2s infinite;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section.about {
+        flex-direction: row;
+        gap: 5vw;
     }
 }
 
