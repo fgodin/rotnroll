@@ -15,16 +15,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 1vh 3vw 1vh 3vw;
+    padding: 1vh 5vw 1vh 5vw;
     background-color: black;
     color: white;
     border-bottom: solid 2px #FF8000;
-    box-shadow: 0 -6px 10px 5px black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.05);
     z-index: 1000;
 }
 
 .header-logo {
-    margin-right: 30px;
     font-family: "Reggae One", sans-serif;
     font-size: 2em;
     font-weight: bold;
@@ -44,7 +43,39 @@ header {
 }
 
 section.banner {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15vh 5vw 10vh 5vw;
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 45%;
+    filter: grayscale(20%);
+    border-bottom: solid 1px #FF8000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+section.banner p {
+    font-family: "Play", sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    transform: rotate(-10deg);
+    text-align: center;
+    text-shadow: 1px 1px #FF8000, 2px 2px 4px black;
+    color: #8C1616;
+}
+
+section.banner a {
+    font-family: "Reggae One", sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    text-decoration: none;
+    transform: rotate(-10deg);
+    text-shadow: 1px 1px #FF8000, 2px 2px 4px black;
+    color: white;
+    animation: wobble 2s infinite;
 }
 
 section.about {
@@ -54,9 +85,22 @@ section.about {
     gap: 5vh;
 }
 
-section.about p {
-    font-size: 1.5em;
-    text-align: justify;
+section.about .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+section.about .container .separator {
+    width: 80%;
+    height: 1px;
+    margin: auto;
+    background-color: #FF8000;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(255, 128, 0, 0.2), 0 15px 40px rgba(225, 128, 0, 0.05);
 }
 
 section.about h1 {
@@ -66,6 +110,12 @@ section.about h1 {
     text-transform: uppercase;
     text-shadow: 1px 1px black, 2px 2px 4px black;
     color: #FF8000;
+}
+
+section.about p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-align-last: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,39 +138,12 @@ section.about h1 {
         color: #FF8000;
     }
 
-    section.banner {
-        display: flex;
-        flex-direction: column;
-        padding: 10vh 5vw 10vh 0;
-        background-image: url("../img/background.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 45%;
-        filter: grayscale(20%);
-        border-bottom: solid 1px #FF8000;
-        box-shadow: 0 -6px 10px 5px black;
-    }
-
     section.banner p {
-        align-self: flex-end;
-        font-family: "Play", sans-serif;
         font-size: 4em;
-        font-weight: bold;
-        transform: rotate(-10deg);
-        text-shadow: 1px 1px #FF8000, 2px 2px 4px black;
-        color: #8C1616;
     }
 
     section.banner a {
-        align-self: flex-end;
-        font-family: "Reggae One", sans-serif;
         font-size: 6em;
-        font-weight: bold;
-        text-decoration: none;
-        transform: rotate(-10deg);
-        text-shadow: 1px 1px #FF8000, 2px 2px 4px black;
-        color: white;
-        animation: wobble 2s infinite;
     }
 }
 
